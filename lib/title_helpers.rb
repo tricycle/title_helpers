@@ -27,7 +27,7 @@ protected
     unless site_title
       title = fs_escape(@title || @full_title)
     else
-      title = @full_title || (@title && "#{fs_escape @title} – %s") || "%s"
+      title = @full_title || (@title && "#{fs_escape @title} - %s") || "%s"
     end
     ERB::Util.h(title % site_title)
   end
